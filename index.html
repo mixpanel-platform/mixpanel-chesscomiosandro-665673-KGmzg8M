@@ -43,7 +43,7 @@
       var MembershipLine  = $('#Membership').MPChart({chartType: 'line'});
       var GamesPlatformLine  = $('#GamesPlatform').MPChart({chartType: 'line'});
       var ActivityLine  = $('#Activity').MPChart({chartType: 'line'});
-      var LoginPlatformBar  = $('#LoginPlatform').MPChart({chartType: 'bar'});
+      var LoginPlatformLine  = $('#LoginPlatform').MPChart({chartType: 'line'});
      
       var DayParams = {
             from: moment().subtract('30', 'days'),
@@ -101,7 +101,7 @@
         
         MP.api.segment('Login', 'Platform', WeekParams).done(function(results) {
             
-            LoginPlatformBar.MPChart('setData', results);
+            LoginPlatformLine.MPChart('setData', results);
         });
         
         }
