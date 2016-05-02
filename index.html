@@ -41,7 +41,7 @@
       var RegistrationLine  = $('#Registration').MPChart({chartType: 'line'});
       var SubscriptionPlatformLine  = $('#SubscriptionPlatform').MPChart({chartType: 'line'});
       var MembershipLine  = $('#Membership').MPChart({chartType: 'line'});
-      var GamesPlatformBar  = $('#GamesPlatform').MPChart({chartType: 'bar'});
+      var GamesPlatformLine  = $('#GamesPlatform').MPChart({chartType: 'line'});
       var ActivityLine  = $('#Activity').MPChart({chartType: 'line'});
       var LoginPlatformBar  = $('#LoginPlatform').MPChart({chartType: 'bar'});
      
@@ -87,7 +87,7 @@
         
         MP.api.segment('Complete Game', 'Platform', WeekParams).done(function(results) {
             
-            GamesPlatformBar.MPChart('setData', results);
+            GamesPlatformLine.MPChart('setData', results);
         });
         
         //Activity Data
