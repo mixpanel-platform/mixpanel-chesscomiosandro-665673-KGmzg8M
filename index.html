@@ -39,7 +39,7 @@
     </style>
     <script>
       var RegistrationLine  = $('#Registration').MPChart({chartType: 'line'});
-      var SubscriptionPlatformBar  = $('#SubscriptionPlatform').MPChart({chartType: 'bar'});
+      var SubscriptionPlatformLine  = $('#SubscriptionPlatform').MPChart({chartType: 'line'});
       var MembershipLine  = $('#Membership').MPChart({chartType: 'line'});
       var GamesPlatformBar  = $('#GamePlatform').MPChart({chartType: 'bar'});
       var ActivityLine  = $('#Activity').MPChart({chartType: 'line'});
@@ -73,7 +73,7 @@
         
         MP.api.segment('Subscription Purchased', 'Platform', WeekParams).done(function(results) {
             
-            SubscriptionPlatformBar.MPChart('setData', results)
+            SubscriptionPlatformLine.MPChart('setData', results)
         });
         
          //Membership Data
