@@ -46,7 +46,7 @@
       var LoginPlatformLine  = $('#LoginPlatform').MPChart({chartType: 'line'});
      
       var DayParams = {
-            from: datefield0.setValue('2015-13-12'),
+            from: moment().subtract('30', 'days'),
             to: moment(),
             type: 'general',
             unit: 'day',
